@@ -29,7 +29,7 @@ public class MouseLocker : MonoBehaviour
     {
         isMouseLocked = true;
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = true;
         SetCursorTexture();
     }
 
