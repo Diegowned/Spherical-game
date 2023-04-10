@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10.0f; // the speed at which the sphere rolls
     public float jumpForce = 500.0f; // the force applied to the sphere when it jumps
+    public float gravity = 10f;
     private Rigidbody rb; // reference to the sphere's rigidbody component
     private Camera mainCamera; // reference to the main camera
     private bool isGrounded = false; // flag to check if the sphere is grounded
@@ -23,7 +24,12 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce); // apply force to the sphere to make it jump
             isGrounded = false; // set the flag to false, since the sphere is no longer grounded
         }
-       
+        if (!isGrounded)
+        {
+            rb.AddForce(Vector3.down * gravity);
+            isGrounded = false;
+        }
+
     }
 
     private void FixedUpdate()
