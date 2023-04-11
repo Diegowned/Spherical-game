@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrapplingHook : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GrapplingHook : MonoBehaviour
     public float grappleSpeed = 1f; // Speed at which the player swings on the grapple
     public LayerMask grappleableLayers; // Layers that the grapple can attach to
     public Color lineColor = Color.white; // Color of the line renderer
+    public Image crosshair;
 
     private Rigidbody playerRigidbody;
     [SerializeField]
@@ -32,6 +34,18 @@ public class GrapplingHook : MonoBehaviour
 
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(crosshair.rectTransform.position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, maxDistance, grappleableLayers))
+        {
+            crosshair.color = Color.green;
+        }
+
+        else
+        {
+            crosshair.color = Color.white;
+        }
+
         if (Input.GetButtonDown("Fire1") && !isGrappling)
         {
             StartGrapple();
@@ -78,7 +92,9 @@ public class GrapplingHook : MonoBehaviour
 
     void StartGrapple()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+        Ray ray = Camera.main.ScreenPointToRay(crosshair.rectTransform.position);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, maxDistance, grappleableLayers))
         {
@@ -98,6 +114,10 @@ public class GrapplingHook : MonoBehaviour
 
             // Enable the line renderer to show the spring joint
             lineRenderer.enabled = true;
+
+            // Change the crosshair colour to another
+            crosshair.color = Color.yellow;
+
         }
     }
 
@@ -105,11 +125,17 @@ public class GrapplingHook : MonoBehaviour
     {
         isGrappling = false;
 
+        //Change the colour of the crosshair to normal
+
         // Remove the spring joint component
         Destroy(grappleJoint);
 
         // Disable the line renderer
         lineRenderer.enabled = false;
+
+
+        // Change the crosshair colour to another
+        crosshair.color = Color.white;
     }
 }
 
