@@ -2683,7 +2683,7 @@ MonoBehaviour:
   jumpForce: 1500
   gravity: 10
   normalGravity: 10
-  gravitywhenJumping: 20
+  gravitywhenJumping: 17
   currentState: 0
 --- !u!114 &1162657285
 MonoBehaviour:
