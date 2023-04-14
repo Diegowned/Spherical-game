@@ -12,11 +12,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb; // reference to the sphere's rigidbody component
     private Camera mainCamera; // reference to the main camera
     private bool isGrounded = false; // flag to check if the sphere is grounded
-    public float groundDistance = 0.1f; // The distance to check for ground
 
     [SerializeField]
     private PlayerState currentState = PlayerState.Idle;
-
 
 
     public enum PlayerState
@@ -30,17 +28,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
-    }
-
-    void LateUpdate()
-    {
-        // adjust the raycast position to be at the bottom of the sphere, and not rotate with the sphere
-        Vector3 raycastPos = transform.position - rb.centerOfMass;
-        raycastPos.y -= transform.localScale.x / 2f;
-        transform.rotation = Quaternion.identity;
-
-        // visualize the raycast in the Scene view for debugging
-        Debug.DrawRay(raycastPos, -Vector3.up * groundDistance, Color.red);
     }
 
 
@@ -77,6 +64,7 @@ public class PlayerController : MonoBehaviour
                 {
                     currentState = PlayerState.Falling;
                 }
+
                 break;
 
             case PlayerState.Running:
@@ -88,6 +76,11 @@ public class PlayerController : MonoBehaviour
                 {
                     currentState = PlayerState.Running;
                 }
+
+                else
+                {
+                    currentState = PlayerState.Idle;
+                }
                 if (!isGrounded)
                 {
                     currentState = PlayerState.Falling;
@@ -95,11 +88,6 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     currentState = PlayerState.Jumping;
-                }
-
-                if (isGrounded)
-                {
-                    currentState = PlayerState.Idle;
                 }
 
                 break;
@@ -124,14 +112,16 @@ public class PlayerController : MonoBehaviour
                 //Changes the gravity while jumping for a better feel of physics
                 gravity = gravitywhenJumping;
 
-                if (!isGrounded)
-                {
-                    currentState = PlayerState.Falling;
-                }
                 if (isGrounded)
                 {
                     currentState = PlayerState.Idle;
                 }
+
+                if (!isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+
                 if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
                 {
                     currentState = PlayerState.Running;
@@ -159,4 +149,14 @@ public class PlayerController : MonoBehaviour
             isGrounded = true; // set the flag to true, since the sphere is now grounded
         }
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        {
+            if (collision.gameObject.CompareTag("Ground")) // check if the sphere has collided with an object tagged as "Ground"
+            {
+                isGrounded = false; // set the flag to true, since the sphere is now grounded
+            }
+        }
 }
+}   

@@ -2588,7 +2588,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &1162657279
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2683,8 +2683,7 @@ MonoBehaviour:
   jumpForce: 1500
   gravity: 10
   normalGravity: 10
-  gravitywhenJumping: 30
-  groundDistance: 10
+  gravitywhenJumping: 20
   currentState: 0
 --- !u!114 &1162657285
 MonoBehaviour:
