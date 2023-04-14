@@ -7,22 +7,49 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f; // the speed at which the sphere rolls
     public float jumpForce = 500.0f; // the force applied to the sphere when it jumps
     public float gravity = 10f;
+    public float normalGravity;
+    public float gravitywhenJumping;
     private Rigidbody rb; // reference to the sphere's rigidbody component
     private Camera mainCamera; // reference to the main camera
     private bool isGrounded = false; // flag to check if the sphere is grounded
+    public float groundDistance = 0.1f; // The distance to check for ground
 
+    [SerializeField]
+    private PlayerState currentState = PlayerState.Idle;
+
+
+
+    public enum PlayerState
+    {
+        Idle,
+        Running,
+        Jumping,
+        Falling,
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
     }
 
+    void LateUpdate()
+    {
+        // adjust the raycast position to be at the bottom of the sphere, and not rotate with the sphere
+        Vector3 raycastPos = transform.position - rb.centerOfMass;
+        raycastPos.y -= transform.localScale.x / 2f;
+        transform.rotation = Quaternion.identity;
+
+        // visualize the raycast in the Scene view for debugging
+        Debug.DrawRay(raycastPos, -Vector3.up * groundDistance, Color.red);
+    }
+
+
     void Update()
     {
         if (Input.GetButtonDown("Jump") && isGrounded) // check if the player has pressed the jump button and the sphere is grounded
         {
             rb.AddForce(Vector3.up * jumpForce); // apply force to the sphere to make it jump
-            isGrounded = false; // set the flag to false, since the sphere is no longer grounded
+            isGrounded = false; 
         }
         if (!isGrounded)
         {
@@ -30,7 +57,89 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
+        switch (currentState)
+        {
+            case PlayerState.Idle:
+
+
+                //Changes gravity to normal
+                gravity = normalGravity;
+
+                if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                {
+                    currentState = PlayerState.Running;
+                }
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    currentState = PlayerState.Jumping;
+                }
+                if (!isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+                break;
+
+            case PlayerState.Running:
+
+                //Changes gravity to normal
+                gravity = normalGravity;
+
+                if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                {
+                    currentState = PlayerState.Running;
+                }
+                if (!isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    currentState = PlayerState.Jumping;
+                }
+
+                if (isGrounded)
+                {
+                    currentState = PlayerState.Idle;
+                }
+
+                break;
+
+            case PlayerState.Jumping:
+                
+                //Changes the gravity while jumping for a better feel of physics
+                gravity = gravitywhenJumping;
+
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    currentState = PlayerState.Jumping;
+                }
+                if (!isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+                break;
+
+            case PlayerState.Falling:
+
+                //Changes the gravity while jumping for a better feel of physics
+                gravity = gravitywhenJumping;
+
+                if (!isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+                if (isGrounded)
+                {
+                    currentState = PlayerState.Idle;
+                }
+                if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                {
+                    currentState = PlayerState.Running;
+                }
+                break;
+        }
     }
+
 
     private void FixedUpdate()
     {
