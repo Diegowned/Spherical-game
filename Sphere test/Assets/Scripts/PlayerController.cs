@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Unity.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,9 +11,12 @@ public class PlayerController : MonoBehaviour
     public float gravity = 10f;
     public float normalGravity;
     public float gravitywhenJumping;
+    public float gravitywhenGrappling;
     private Rigidbody rb; // reference to the sphere's rigidbody component
     private Camera mainCamera; // reference to the main camera
     private bool isGrounded = false; // flag to check if the sphere is grounded
+    public TMP_Text playerStateText;
+    public GrapplingHook grapplingHookScript;
 
     [SerializeField]
     private PlayerState currentState = PlayerState.Idle;
@@ -23,16 +28,21 @@ public class PlayerController : MonoBehaviour
         Running,
         Jumping,
         Falling,
+        Grappling,
     }
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
+        grapplingHookScript = GetComponent<GrapplingHook>();
     }
 
 
     void Update()
     {
+
+        playerStateText.text = currentState.ToString();
+
         if (Input.GetButtonDown("Jump") && isGrounded) // check if the player has pressed the jump button and the sphere is grounded
         {
             rb.AddForce(Vector3.up * jumpForce); // apply force to the sphere to make it jump
@@ -65,6 +75,12 @@ public class PlayerController : MonoBehaviour
                     currentState = PlayerState.Falling;
                 }
 
+                if (grapplingHookScript.isGrappling)
+                {
+                    currentState = PlayerState.Grappling;
+                }
+
+
                 break;
 
             case PlayerState.Running:
@@ -90,6 +106,12 @@ public class PlayerController : MonoBehaviour
                     currentState = PlayerState.Jumping;
                 }
 
+                if (grapplingHookScript.isGrappling)
+                {
+                    currentState = PlayerState.Grappling;
+                }
+
+
                 break;
 
             case PlayerState.Jumping:
@@ -105,6 +127,12 @@ public class PlayerController : MonoBehaviour
                 {
                     currentState = PlayerState.Falling;
                 }
+
+                if (grapplingHookScript.isGrappling)
+                {
+                    currentState = PlayerState.Grappling;
+                }
+
                 break;
 
             case PlayerState.Falling:
@@ -126,6 +154,26 @@ public class PlayerController : MonoBehaviour
                 {
                     currentState = PlayerState.Running;
                 }
+
+                if (grapplingHookScript.isGrappling)
+                {
+                    currentState = PlayerState.Grappling;
+                }
+
+                break;
+
+            case PlayerState.Grappling:
+
+                //Changes the gravity while jumping so the grapple does not break
+
+                gravity = gravitywhenGrappling;
+
+                if (!grapplingHookScript.isGrappling)
+                {
+                    currentState = PlayerState.Idle;
+                }
+
+
                 break;
         }
     }

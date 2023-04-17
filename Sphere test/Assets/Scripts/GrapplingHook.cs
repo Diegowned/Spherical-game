@@ -16,7 +16,7 @@ public class GrapplingHook : MonoBehaviour
     private float distanceGrapple;
     public float mingrappleDistance;
     public float maxgrappleDistance;
-    private bool isGrappling = false;
+    public bool isGrappling = false;
     private Vector3 grapplePoint;
     private SpringJoint grappleJoint;
     private LineRenderer lineRenderer;
