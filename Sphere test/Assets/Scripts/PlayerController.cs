@@ -173,6 +173,15 @@ public class PlayerController : MonoBehaviour
                     currentState = PlayerState.Idle;
                 }
 
+                if (!grapplingHookScript.isGrappling && !isGrounded)
+                {
+                    currentState = PlayerState.Falling;
+                }
+
+                if (!grapplingHookScript.isGrappling && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                {
+                    currentState = PlayerState.Running;
+                }
 
                 break;
         }
