@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5076314551920129425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5076314551920129428}
+  - component: {fileID: 5076314551920129427}
+  - component: {fileID: 5076314551920129426}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5076314551920129428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076314551920129425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5076314552864884443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &5076314551920129427
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076314551920129425}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
+  orthographic: 0
+  orthographic size: 10
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &5076314551920129426
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076314551920129425}
+  m_Enabled: 1
+--- !u!1 &5076314552864884442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5076314552864884443}
+  - component: {fileID: 5076314552864884444}
+  m_Layer: 0
+  m_Name: Camera Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5076314552864884443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076314552864884442}
+  m_LocalRotation: {x: 0.002785397, y: 0.97162735, z: 0.0114568425, w: -0.23622286}
+  m_LocalPosition: {x: 11.477627, y: 9.01, z: 19.16955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5076314551920129428}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5076314552864884444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076314552864884442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3448bdeccae5d54b9a3f6f43274f1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UseFixedUpdate: 0
+  _Mode: 0
+  _Anchor: {fileID: 0}
+  _FrameForceToFollowAnchor: 0
+  _IsInternalUpdateEnabled: 1
+  _IsFixedUpdateEnabled: 0
+  _FixedUpdateFPS: 60
+  _InputSourceOwner: {fileID: 0}
+  _AutoFindInputSource: 1
+  _AnchorOffset: {x: 0, y: 5, z: 0}
+  _RotateAnchorOffset: 1
+  _InvertPitch: 1
+  _ActiveMotorIndex: 0
+  MotorTestActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  MotorActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  MotorDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ActionTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _IsCollisionsEnabled: 1
+  _CollisionLayers: 1
+  _CollisionRadius: 0.2
+  _MinCollisionDistance: 0
+  _CollisionRecoverySpeed: 5
+  _IsZoomEnabled: 1
+  _ZoomActionAlias: Camera Zoom
+  _ZoomResetOnRelease: 1
+  _ZoomSpeed: 25
+  _ZoomSmoothing: 0.1
+  _ZoomMin: 20
+  _ZoomMax: 0
+  _IsFadeEnabled: 0
+  _FadeDistance: 0.4
+  _FadeSpeed: 0.25
+  _DisableRenderers: 0
+  _ShakeStrength:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MotorDefinitions:
+  - '{, "Type" : "com.ootii.Cameras.OrbitFollowMotor, ootii, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null", "Name" : "3rd Person Follow", "IsEnabled" : "True", "ActionAlias"
+    : "", "UseRigAnchor" : "True", "AnchorIndex" : "-1", "AnchorOffset" : "(0, 0,
+    0)", "Offset" : "(0, 0, 0)", "Distance" : "25.00000", "MaxDistance" : "25.00000",
+    "IsCollisionEnabled" : "True", "IsFadingEnabled" : "True", "SpecifyFadeRenderers"
+    : "False", "FadeTransformIndexes" : "", "IsYawEnabled" : "True", "MinYaw" : "-180",
+    "MaxYaw" : "180", "YawSpeed" : "120", "TargetRotationMultiplier" : "3", "IsPitchEnabled"
+    : "True", "InvertPitch" : "True", "MinPitch" : "-60", "MaxPitch" : "60", "PitchSpeed"
+    : "70", "Smoothing" : "0.05"}'
+  - '{, "Type" : "com.ootii.Cameras.OrbitFixedMotor, ootii, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null", "Name" : "3rd Person Fixed", "IsEnabled" : "True", "ActionAlias"
+    : "", "UseRigAnchor" : "True", "AnchorIndex" : "-1", "AnchorOffset" : "(0, 0,
+    0)", "Offset" : "(0, 0, 0)", "Distance" : "3.00000", "MaxDistance" : "3.00000",
+    "IsCollisionEnabled" : "True", "IsFadingEnabled" : "True", "SpecifyFadeRenderers"
+    : "False", "FadeTransformIndexes" : "", "RotateWithAnchor" : "False", "RotateAnchor"
+    : "False", "RotateAnchorAlias" : "Camera Rotate Character", "IsYawEnabled" :
+    "True", "MinYaw" : "-180", "MaxYaw" : "180", "YawSpeed" : "120", "TargetRotationMultiplier"
+    : "3", "IsPitchEnabled" : "True", "InvertPitch" : "True", "MinPitch" : "-60",
+    "MaxPitch" : "60", "PitchSpeed" : "45", "Smoothing" : "0.05"}'
+  - '{, "Type" : "com.ootii.Cameras.OrbitFixedMotor, ootii, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null", "Name" : "Targeting", "IsEnabled" : "True", "ActionAlias"
+    : "", "UseRigAnchor" : "True", "AnchorIndex" : "-1", "AnchorOffset" : "(0, 0,
+    0)", "Offset" : "(0.5, 0, 0)", "Distance" : "0.50000", "MaxDistance" : "0.50000",
+    "IsCollisionEnabled" : "True", "IsFadingEnabled" : "True", "SpecifyFadeRenderers"
+    : "False", "FadeTransformIndexes" : "", "RotateWithAnchor" : "False", "RotateAnchor"
+    : "True", "RotateAnchorAlias" : "Camera Rotate Character", "IsYawEnabled" : "True",
+    "MinYaw" : "-180", "MaxYaw" : "180", "YawSpeed" : "120", "TargetRotationMultiplier"
+    : "3", "IsPitchEnabled" : "True", "InvertPitch" : "True", "MinPitch" : "-60",
+    "MaxPitch" : "60", "PitchSpeed" : "45", "Smoothing" : "0.05"}'
+  - '{, "Type" : "com.ootii.Cameras.TransitionMotor, ootii, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null", "Name" : "Targeting In", "IsEnabled" : "True", "ActionAlias"
+    : "Camera Aim", "UseRigAnchor" : "True", "AnchorIndex" : "-1", "AnchorOffset"
+    : "(0, 0, 0)", "Offset" : "(0, 0, 0)", "Distance" : "0.00000", "MaxDistance"
+    : "0.00000", "IsCollisionEnabled" : "True", "IsFadingEnabled" : "True", "SpecifyFadeRenderers"
+    : "False", "FadeTransformIndexes" : "", "StartMotorIndex" : "0", "EndMotorIndex"
+    : "2", "EndMotorIndexOverride" : "-1", "PositionBlend" : "0", "RotationBlend"
+    : "0", "TransitionTime" : "0.15", "ActionAliasEventType" : "0", "LimitToStart"
+    : "True", "TestDistance" : "False", "ActorStances" : "", "InvertVerifyActorStances"
+    : "False", "DistanceCompareType" : "0", "DistanceValue" : "0.5"}'
+  - '{, "Type" : "com.ootii.Cameras.TransitionMotor, ootii, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null", "Name" : "Targeting Out", "IsEnabled" : "True", "ActionAlias"
+    : "Camera Aim", "UseRigAnchor" : "True", "AnchorIndex" : "-1", "AnchorOffset"
+    : "(0, 0, 0)", "Offset" : "(0, 0, 0)", "Distance" : "0.00000", "MaxDistance"
+    : "0.00000", "IsCollisionEnabled" : "True", "IsFadingEnabled" : "True", "SpecifyFadeRenderers"
+    : "False", "FadeTransformIndexes" : "", "StartMotorIndex" : "2", "EndMotorIndex"
+    : "0", "EndMotorIndexOverride" : "-1", "PositionBlend" : "0", "RotationBlend"
+    : "0", "TransitionTime" : "0.25", "ActionAliasEventType" : "1", "LimitToStart"
+    : "True", "TestDistance" : "False", "ActorStances" : "", "InvertVerifyActorStances"
+    : "False", "DistanceCompareType" : "0", "DistanceValue" : "0.5"}'
+  StoredTransforms: []
+  EditorShowDebug: 0
+  EditorTabIndex: 0
+  EditorMotorIndex: 0
+  EditorRefresh: 0
+  EditorCameraStyle: 1
+  EditorUseAdventureStyle: 1
+  EditorShowEvents: 0
