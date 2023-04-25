@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class ScoreSystem : MonoBehaviour
 {
     public TMP_Text scoreText;
     public TMP_Text multiplierText;
-    public float multiplierDuration = 10f;
+    public float baseMultiplierDuration = 10f;
+    public int pickupsForMultiplierIncrease = 3;
     private int score = 0;
     private int multiplier = 1;
     private float multiplierTimer = 0f;
+    private int pickupsCollectedDuringMultiplier = 0;
 
     private void Update()
     {
@@ -31,21 +32,28 @@ public class ScoreSystem : MonoBehaviour
     {
         if (other.CompareTag("Pickup"))
         {
-            score += 10 * multiplier;
+            score += 1 * multiplier;
             scoreText.text = "Score: " + score;
 
             if (multiplierTimer > 0)
             {
-                multiplier++;
+                pickupsCollectedDuringMultiplier++;
+                if (pickupsCollectedDuringMultiplier >= pickupsForMultiplierIncrease)
+                {
+                    multiplier++;
+                    pickupsCollectedDuringMultiplier = 0;
+                }
             }
             else
             {
                 multiplier = 2;
-                multiplierTimer = multiplierDuration;
             }
 
+            multiplierTimer = baseMultiplierDuration;
             multiplierText.text = "Multiplier: " + multiplier + "x (" + multiplierTimer.ToString("0") + "s)";
             Destroy(other.gameObject);
         }
     }
 }
+
+
