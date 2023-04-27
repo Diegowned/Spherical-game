@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
         int minutes = Mathf.FloorToInt(timer / 60);
         int seconds = Mathf.FloorToInt(timer % 60);
         int milliseconds = Mathf.FloorToInt((timer - Mathf.Floor(timer)) * 1000);
