@@ -43,12 +43,6 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    IEnumerator ButtonAppears()
-    {
-        yield return new WaitForSeconds(2);
-        canvasAnimator.SetBool("buttonAppears", true);
-    }
-
     private void FixedUpdate()
     {
         if (fadeIsOn && alpha > 1)
