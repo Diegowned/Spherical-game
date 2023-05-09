@@ -6997,6 +6997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f63229c11dc05948b4a616964701228, type: 3}
+--- !u!198 &2098509971 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3304170459122133642, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+  m_PrefabInstance: {fileID: 7072607605697367262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127973336
 GameObject:
   m_ObjectHideFlags: 0
@@ -7390,10 +7395,74 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 172456725115124733, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_Particles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 172456725115124733, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_Particles.Array.data[0]
+      value: 
+      objectReference: {fileID: 2098509971}
+    - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4560350437676042336, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893479772014486300, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779203458568167279, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607605595557208, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607605683731546, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7072607605924144915, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
       propertyPath: velocityScript
       value: 
       objectReference: {fileID: 1162657285}
+    - target: {fileID: 7072607605924144916, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607606027553376, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607606164188977, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607606267134042, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072607606640067319, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7072607607042404505, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7482,6 +7551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7332152543946835602, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
 --- !u!1001 &9033625308422294535
@@ -7555,6 +7628,10 @@ PrefabInstance:
       propertyPath: imageToControl
       value: 
       objectReference: {fileID: 1736765889}
+    - target: {fileID: 9033625309440766478, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
+      propertyPath: particleEffectPrefab
+      value: 
+      objectReference: {fileID: 2098509971}
     - target: {fileID: 9033625309440766479, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
       propertyPath: scoreText
       value: 

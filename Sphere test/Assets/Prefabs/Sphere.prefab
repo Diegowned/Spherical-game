@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0a032c12e59f74f82cb59649fd8e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedlineValue: 400
+  particleEffectPrefab: {fileID: 0}
   imageToControl: {fileID: 0}
   maxValue: 400
   currentValue: 0
@@ -187,7 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   multiplierText: {fileID: 0}
-  multiplierDuration: 10
+  baseMultiplierDuration: 10
+  pickupsForMultiplierIncrease: 3
 --- !u!114 &9033625309440766464
 MonoBehaviour:
   m_ObjectHideFlags: 0
