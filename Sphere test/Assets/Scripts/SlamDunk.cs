@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class SlamDunk : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class SlamDunk : MonoBehaviour
         if (Input.GetKeyDown(stopKey))
         {
             StopSphere();
+            CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
         }
     }
 
