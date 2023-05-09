@@ -26,6 +26,10 @@ public class ImageFillController : MonoBehaviour
             particleEffectPrefab.Play();
 
         }
+        else
+        {
+            particleEffectPrefab.Stop();
+        }
 
         currentValue = getVelocity.speedForUI;
 

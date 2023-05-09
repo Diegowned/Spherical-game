@@ -7403,6 +7403,10 @@ PrefabInstance:
       propertyPath: m_Particles.Array.data[0]
       value: 
       objectReference: {fileID: 2098509971}
+    - target: {fileID: 3304170459122133642, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
       propertyPath: m_RootOrder
       value: 9

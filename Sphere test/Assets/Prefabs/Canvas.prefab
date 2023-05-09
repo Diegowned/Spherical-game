@@ -558,7 +558,7 @@ MonoBehaviour:
   m_MeshSharing: 0
   m_GroupId: 0
   m_GroupMaxId: 0
-  m_AbsoluteMode: 0
+  m_AbsoluteMode: 1
 --- !u!1 &5810023899139343808
 GameObject:
   m_ObjectHideFlags: 0
