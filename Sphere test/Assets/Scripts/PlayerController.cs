@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float gravitywhenGrappling;
     private Rigidbody rb; // reference to the sphere's rigidbody component
     private Camera mainCamera; // reference to the main camera
-    private bool isGrounded = false; // flag to check if the sphere is grounded
+    public bool isGrounded = false; // flag to check if the sphere is grounded
     public TMP_Text playerStateText;
     public GrapplingHook grapplingHookScript;
 

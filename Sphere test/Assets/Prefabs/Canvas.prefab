@@ -2071,10 +2071,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System
       objectReference: {fileID: 0}
-    - target: {fileID: 6661981364002207279, guid: ed7971a716961c34a98e224bbea4954a, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7971a716961c34a98e224bbea4954a, type: 3}
 --- !u!198 &3304170459122133642 stripped

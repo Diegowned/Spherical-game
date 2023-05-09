@@ -8,17 +8,20 @@ public class SlamDunk : MonoBehaviour
     public KeyCode stopKey = KeyCode.LeftShift; // the key to stop the sphere's movement
     public float stopSpeed = 10f; // the speed at which the sphere will stop
     public float slamForce = 500f; // the force with which the sphere will slam into the ground
+    public PlayerController pc;
 
     private Rigidbody rb; // reference to the sphere's Rigidbody component
 
     void Start()
     {
+        pc = GameObject.Find("Sphere").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(stopKey))
+        if (Input.GetKeyDown(stopKey) && !pc.isGrounded)
+
         {
             StopSphere();
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
