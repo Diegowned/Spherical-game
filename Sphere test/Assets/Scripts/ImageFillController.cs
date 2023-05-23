@@ -18,6 +18,7 @@ public class ImageFillController : MonoBehaviour
     {
         particleEffectPrefab = GameObject.Find("Particle System").GetComponent<ParticleSystem>(); ;
         getVelocity = GetComponent<GetVelocity>();
+        imageToControl = GameObject.Find("Canvas/Speedometer").GetComponent<Image>();
     }
     private void Update()
     {

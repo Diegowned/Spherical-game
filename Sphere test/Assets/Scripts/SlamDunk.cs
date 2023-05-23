@@ -15,7 +15,7 @@ public class SlamDunk : MonoBehaviour
 
     void Start()
     {
-        shockwaveParticle = GameObject.Find("Sphere/Particle System/CFXR2 Ground Hit").GetComponent<ParticleSystem>();
+        shockwaveParticle = GameObject.Find("Player/CFXR2 Ground Hit").GetComponent<ParticleSystem>();
         pc = GameObject.Find("Sphere").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
     }
@@ -26,8 +26,6 @@ public class SlamDunk : MonoBehaviour
 
         {
             StopSphere();
-
-
         }
     }
 
@@ -38,6 +36,7 @@ public class SlamDunk : MonoBehaviour
 
         // apply a force to the sphere in the negative y-direction to make it slam into the ground
         rb.AddForce(Vector3.down * slamForce, ForceMode.Impulse);
+
     }
 
     void OnCollisionEnter(Collision collision)

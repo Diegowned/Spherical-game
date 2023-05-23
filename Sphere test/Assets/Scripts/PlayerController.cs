@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerStateText = GameObject.Find("Canvas/Player State Text").GetComponent<TMP_Text>();
         mainCamera = Camera.main;
         grapplingHookScript = GetComponent<GrapplingHook>();
     }

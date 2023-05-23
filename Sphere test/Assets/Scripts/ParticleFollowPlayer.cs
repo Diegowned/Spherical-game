@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowTarget : MonoBehaviour
+public class ParticleFollowPlayer : MonoBehaviour
 {
     public Transform target;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -13,7 +14,6 @@ public class FollowTarget : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = target.position;
+        transform.position = target.position + offset;
     }
-
 }

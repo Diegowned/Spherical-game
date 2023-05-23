@@ -12,6 +12,7 @@ public class GetVelocity : MonoBehaviour
 
     void Start()
     {
+        velocityText = GameObject.Find("Canvas/Speed And Velocity Text").GetComponent<TMP_Text>();
         rb = GetComponent<Rigidbody>();
     }
 

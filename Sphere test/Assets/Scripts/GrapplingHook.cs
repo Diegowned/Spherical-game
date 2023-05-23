@@ -23,6 +23,7 @@ public class GrapplingHook : MonoBehaviour
 
     void Start()
     {
+        crosshair = GameObject.Find("Canvas/Crosshair").GetComponent<Image>();
         playerRigidbody = GetComponent<Rigidbody>();
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
