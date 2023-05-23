@@ -7568,6 +7568,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5189785770482926371, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275424615765880899, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
+      propertyPath: clearBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760126089821949179, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9033625309440766458, guid: cf84ff1fe35a50948b7fed2db5f388d9, type: 3}
       propertyPath: m_Name
       value: Sphere
