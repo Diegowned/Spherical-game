@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded) // check if the player has pressed the jump button and the sphere is grounded
         {
             rb.AddForce(Vector3.up * jumpForce); // apply force to the sphere to make it jump
-            isGrounded = false; 
         }
         if (!isGrounded)
         {
@@ -215,5 +214,5 @@ public class PlayerController : MonoBehaviour
                 isGrounded = false; // set the flag to true, since the sphere is now grounded
             }
         }
-}
+    }
 }   

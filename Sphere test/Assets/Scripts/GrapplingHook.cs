@@ -79,15 +79,9 @@ public class GrapplingHook : MonoBehaviour
 
             if(distanceGrapple > maxgrappleDistance)
             {
-                
-
                 Vector3 newPlayerPosition = grapplePoint + grappleDirection * distanceGrapple;
                 playerRigidbody.MovePosition(newPlayerPosition);
-
-
             }
-
-
         }
     }
 

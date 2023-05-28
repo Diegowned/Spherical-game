@@ -169,10 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4000
-  jumpForce: 1500
+  jumpForce: 2200
   gravity: 10
   normalGravity: 10
-  gravitywhenJumping: 15
+  gravitywhenJumping: 60
   gravitywhenGrappling: 0
   isGrounded: 0
   playerStateText: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   crosshair: {fileID: 0}
   distanceGrapple: 10
   mingrappleDistance: 10
-  maxgrappleDistance: 60
+  maxgrappleDistance: 20
   isGrappling: 0
 --- !u!114 &8603463541410301424
 MonoBehaviour:
