@@ -5,6 +5,8 @@ using EZCameraShake;
 
 public class SlamDunk : MonoBehaviour
 {
+    public float isSlamming;
+    public float slammingAirtime = 3;
     public KeyCode stopKey = KeyCode.LeftShift; // the key to stop the sphere's movement
     public float stopSpeed = 10f; // the speed at which the sphere will stop
     public float slamForce = 500f; // the force with which the sphere will slam into the ground
@@ -26,6 +28,12 @@ public class SlamDunk : MonoBehaviour
 
         {
             StopSphere();
+
+        }
+
+        if (isSlamming > 0)
+        {
+            isSlamming -= Time.deltaTime;
         }
     }
 
@@ -37,14 +45,17 @@ public class SlamDunk : MonoBehaviour
         // apply a force to the sphere in the negative y-direction to make it slam into the ground
         rb.AddForce(Vector3.down * slamForce, ForceMode.Impulse);
 
+        isSlamming = slammingAirtime;
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) // check if the sphere has collided with an object tagged as "Ground"
+        if (collision.gameObject.CompareTag("Ground") && isSlamming > 0) // check if the sphere has collided with an object tagged as "Ground"
         {
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             shockwaveParticle.Play();
+            isSlamming = 0;
         }
     }
 

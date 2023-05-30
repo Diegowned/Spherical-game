@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        timerText = GameObject.Find("Canvas/Timer Text").GetComponent<TMP_Text>();
         timer = startTime;
     }
 
