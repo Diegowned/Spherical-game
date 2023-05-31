@@ -206,6 +206,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground")) // check if the sphere has collided with an object tagged as "Ground"
+        {
+            isGrounded = true; // set the flag to true, since the sphere is now grounded
+        }
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         {

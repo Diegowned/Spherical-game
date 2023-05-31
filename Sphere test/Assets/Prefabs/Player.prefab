@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06c8bfb16f4ad64fb0b8515432a45e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSlamming: 0
+  slammingAirtime: 3
   stopKey: 304
   stopSpeed: 10
   slamForce: 500
@@ -169,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4000
-  jumpForce: 2200
+  jumpForce: 3000
   gravity: 10
   normalGravity: 10
   gravitywhenJumping: 60
