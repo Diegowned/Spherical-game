@@ -13,7 +13,7 @@ public class MainMenuStart : MonoBehaviour
     public void doStartGame()
     {
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
 
     }
 
