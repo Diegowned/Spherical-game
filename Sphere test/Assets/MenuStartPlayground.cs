@@ -7,7 +7,7 @@ public class MenuStartPlayground : MonoBehaviour
     public void doStartGame()
     {
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
 
     }
 }
