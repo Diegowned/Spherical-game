@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 322ba635c331dac4f9cc90c0bf5b1024
+guid: 525f25da163948943be159f83aa4b488
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: dirt
-    second: {fileID: 2800000, guid: b435710385422d94a8d00f8dba23a106, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: grass texture
-    second: {fileID: 2800000, guid: f3ef3fabf53d76144abadb5a1039b945, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: rock texture
-    second: {fileID: 2800000, guid: ca3cb28d7ee832c409457ba0b5d04bfd, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
