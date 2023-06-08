@@ -1357,9 +1357,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1076441512}
     - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: EditorMotorIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: _ActiveMotorIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
       propertyPath: _InputSourceOwner
       value: 
       objectReference: {fileID: 111905250}
+    - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: MotorDefinitions.Array.data[1]
+      value: '{, "Type" : "com.ootii.Cameras.OrbitFixedMotor, ootii, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null", "Name" : "3rd Person Fixed", "IsEnabled"
+        : "True", "ActionAlias" : "", "UseRigAnchor" : "True", "AnchorIndex" : "-1",
+        "AnchorOffset" : "(0, 0, 0)", "Offset" : "(0, 0, 0)", "Distance" : "3.00000",
+        "MaxDistance" : "25.00000", "IsCollisionEnabled" : "True", "IsFadingEnabled"
+        : "True", "SpecifyFadeRenderers" : "False", "FadeTransformIndexes" : "",
+        "RotateWithAnchor" : "False", "RotateAnchor" : "False", "RotateAnchorAlias"
+        : "Camera Rotate Character", "IsYawEnabled" : "True", "MinYaw" : "-180",
+        "MaxYaw" : "180", "YawSpeed" : "120", "TargetRotationMultiplier" : "3", "IsPitchEnabled"
+        : "True", "InvertPitch" : "True", "MinPitch" : "-60", "MaxPitch" : "60",
+        "PitchSpeed" : "45", "Smoothing" : "0.05"}'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
 --- !u!64 &462562676
