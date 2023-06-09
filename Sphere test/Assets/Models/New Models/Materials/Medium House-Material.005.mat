@@ -7,10 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material
+  m_Name: Medium House-Material.005
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
   m_ValidKeywords:
   - _HALFTONESHAPE_DOT
+  - _TOON_SHADING_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c636443753835e545bdd558b1991e6f0, type: 3}
+        m_Texture: {fileID: 2800000, guid: d325fbf7b43dbf04d96b6221a8335961, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -71,7 +72,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c636443753835e545bdd558b1991e6f0, type: 3}
+        m_Texture: {fileID: 2800000, guid: d325fbf7b43dbf04d96b6221a8335961, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -133,7 +134,7 @@ Material:
     - _FaceShadowMapPow: 0.2
     - _FaceShadowSmoothness: 0.1
     - _GlossMapScale: 1
-    - _Glossiness: 0.59999996
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HairSpecExponent: 128
     - _HairSpecNoiseStrength: 1
@@ -161,16 +162,16 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineEnabled: 0
     - _OutlineMode: 0
-    - _OutlineWidth: 12
+    - _OutlineWidth: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _RimLightAlign: 0
     - _RimLightSmoothness: 0
-    - _RimPower: 0.22
+    - _RimPower: 0.55
     - _SizeFalloff: 0
-    - _Smoothness: 0.59999996
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecClipMaskScale: 1
     - _SpecShadowStrength: 1
@@ -185,7 +186,7 @@ Material:
     - _StepViaRampTexture: 0
     - _Surface: 0
     - _ToonBlending: 1
-    - _ToonEnabled: 0
+    - _ToonEnabled: 1
     - _UVSec: 0
     - _UseRampColor: 0
     - _WorkflowMode: 1
@@ -201,12 +202,12 @@ Material:
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -25, g: 50, b: 0, a: 0}
-    - _RimColor: {r: 0.9271835, g: 0.0990566, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8745876523825961509
+--- !u!114 &8324622053741423740
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
