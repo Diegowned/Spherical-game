@@ -1,59 +1,14 @@
 fileFormatVersion: 2
-guid: 9d5c33c3c3d97934facae2069de9df48
+guid: 1f689962a3bac2347a39cc74f657eb3a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 8e33161f5a6284f4480c0512a5e1d00a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 9d8db9aa7d07cd2428b8aa8ef4cc70c5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: af026fd524503604ba3c581bafc86986, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: 1839395e9bfe8e64bb175136f0eecef7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: c8e74ed16412e3b4ca8852493de16072, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.007
-    second: {fileID: 2100000, guid: 277c1797a112c8a4186dccf4eedbe793, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Roofs
-    second: {fileID: 2800000, guid: 689458b0a0288444b91d0b203288504b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Walls
-    second: {fileID: 2800000, guid: d325fbf7b43dbf04d96b6221a8335961, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wood
-    second: {fileID: 2800000, guid: 203079e9c8ba57841a95da657a2e3987, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
-    materialName: 0
+    materialName: 2
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
