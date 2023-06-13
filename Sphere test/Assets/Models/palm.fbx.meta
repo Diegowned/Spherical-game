@@ -1,14 +1,34 @@
 fileFormatVersion: 2
-guid: 4fb89a234cb162044b9aba34244d86e6
+guid: 1ff8ec33ddc3ba64e91fe74822e16c2e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PalmLeaf
+    second: {fileID: 2100000, guid: 7a69da1f92914584d8faa53af991e041, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronco
+    second: {fileID: 2100000, guid: c5b84424055560f409e8d6f5befc4c02, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Palm texture
+    second: {fileID: 2800000, guid: 355f7f4930d5da14480848e4e1602d45, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: palmleaf
+    second: {fileID: 2800000, guid: 1b076dee8e044394599faf4e616788ff, type: 3}
   materials:
     materialImportMode: 2
     materialName: 2
-    materialSearch: 1
-    materialLocation: 0
+    materialSearch: 2
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -35,7 +55,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -88,7 +108,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
