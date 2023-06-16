@@ -61,7 +61,7 @@ public class ScoreSystem : MonoBehaviour
             multiplierText.text = "Multiplier: " + multiplier + "x (" + multiplierTimer.ToString("0") + "s)";
 
             // Change the scale of the pickup
-            Vector3 newScale = new Vector3(43f, 72f, 1f); // Set the desired new scale
+            Vector3 newScale = new Vector3(1f, 0.01f, 1f); // Set the desired new scale
             other.transform.localScale = newScale;
 
             // Change the tag of the pickup
