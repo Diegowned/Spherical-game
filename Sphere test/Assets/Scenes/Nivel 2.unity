@@ -5385,6 +5385,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5076314551920129427, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076314551920129427, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5076314552864884442, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
       propertyPath: m_Name
       value: Camera Controller
