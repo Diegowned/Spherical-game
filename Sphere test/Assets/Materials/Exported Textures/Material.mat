@@ -181,8 +181,8 @@ Material:
     - _SpecularFalloff: 1
     - _SpecularHighlights: 1
     - _SpecularSize: 1
-    - _SpecularStep: 0.6
-    - _SpecularStepSmooth: 0.05
+    - _SpecularStep: 0
+    - _SpecularStepSmooth: 0
     - _SpherizeNormalEnabled: 0
     - _SrcBlend: 1
     - _StencilComp: 0
