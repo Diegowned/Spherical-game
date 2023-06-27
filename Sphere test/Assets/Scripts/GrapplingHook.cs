@@ -20,9 +20,11 @@ public class GrapplingHook : MonoBehaviour
     private Vector3 grapplePoint;
     private SpringJoint grappleJoint;
     private LineRenderer lineRenderer;
+    private GameObject grapplehookImage;
 
     void Start()
     {
+        grapplehookImage = GameObject.Find("Canvas/Controls On Screen/Hook");
         crosshair = GameObject.Find("Canvas/Crosshair").GetComponent<Image>();
         playerRigidbody = GetComponent<Rigidbody>();
         lineRenderer = gameObject.AddComponent<LineRenderer>();
@@ -40,11 +42,13 @@ public class GrapplingHook : MonoBehaviour
         if (Physics.Raycast(ray, out hit, maxDistance, grappleableLayers))
         {
             crosshair.color = Color.green;
+            grapplehookImage.gameObject.SetActive(true);
         }
 
         else
         {
             crosshair.color = Color.white;
+            grapplehookImage.gameObject.SetActive(false);
         }
 
         if (Input.GetButtonDown("Fire1") && !isGrappling)

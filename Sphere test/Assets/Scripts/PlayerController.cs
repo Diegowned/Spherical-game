@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = false; // flag to check if the sphere is grounded
     public TMP_Text playerStateText;
     public GrapplingHook grapplingHookScript;
+    private GameObject slamImage;
 
     [SerializeField]
     private PlayerState currentState = PlayerState.Idle;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        slamImage = GameObject.Find("Canvas/Controls On Screen/Slam");
         rb = GetComponent<Rigidbody>();
         playerStateText = GameObject.Find("Canvas/Player State Text").GetComponent<TMP_Text>();
         mainCamera = Camera.main;
@@ -49,8 +51,13 @@ public class PlayerController : MonoBehaviour
         }
         if (!isGrounded)
         {
+            slamImage.gameObject.SetActive(true);
             rb.AddForce(Vector3.down * gravity);
             isGrounded = false;
+        }
+        if(isGrounded)
+        {
+            slamImage.gameObject.SetActive(false);
         }
 
         switch (currentState)
