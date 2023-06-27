@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSlamming: 0
   slammingAirtime: 3
-  stopKey: 304
+  stopKey: 306
   stopSpeed: 10
   slamForce: 500
   pc: {fileID: 0}
