@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public TMP_Text playerStateText;
     public GrapplingHook grapplingHookScript;
     private GameObject slamImage;
+    private GameObject jumpImage;
 
     [SerializeField]
     private PlayerState currentState = PlayerState.Idle;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        jumpImage = GameObject.Find("Canvas/Controls On Screen/Jump");
         slamImage = GameObject.Find("Canvas/Controls On Screen/Slam");
         rb = GetComponent<Rigidbody>();
         playerStateText = GameObject.Find("Canvas/Player State Text").GetComponent<TMP_Text>();
@@ -51,12 +53,14 @@ public class PlayerController : MonoBehaviour
         }
         if (!isGrounded)
         {
+            jumpImage.gameObject.SetActive(false);
             slamImage.gameObject.SetActive(true);
             rb.AddForce(Vector3.down * gravity);
             isGrounded = false;
         }
         if(isGrounded)
         {
+            jumpImage.gameObject.SetActive(true);
             slamImage.gameObject.SetActive(false);
         }
 
