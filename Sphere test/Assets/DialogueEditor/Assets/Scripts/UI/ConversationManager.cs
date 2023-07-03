@@ -39,6 +39,7 @@ namespace DialogueEditor
         public bool OptionImageSliced;
         public bool AllowMouseInteraction;
 
+
         // Non-User facing 
         // Not exposed via custom inspector
         // 
