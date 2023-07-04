@@ -14,10 +14,13 @@ public class ScoreSystem : MonoBehaviour
     private int multiplier = 1;
     private float multiplierTimer = 0f;
     private int pickupsCollectedDuringMultiplier = 0;
+    public AudioSource pigSquashSound;
 
 
     private void Start()
     {
+        pigSquashSound = GameObject.Find("Enemy Grunt 1").GetComponent<AudioSource>();
+        pigSquashSound = GameObject.Find("Enemy Grunt 2").GetComponent<AudioSource>();
         scoreText = GameObject.Find("Canvas/Score Text").GetComponent<TMP_Text>();
         multiplierText = GameObject.Find("Canvas/Multiplier Text").GetComponent<TMP_Text>();
     }
@@ -40,6 +43,7 @@ public class ScoreSystem : MonoBehaviour
     {
         if (other.CompareTag("Pickup"))
         {
+            pigSquashSound.Play();
             score += 1 * multiplier;
             scoreText.text = "Score: " + score;
 

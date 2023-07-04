@@ -1929,6 +1929,7 @@ MonoBehaviour:
   soHead: {fileID: 204264830}
   player: {fileID: 72153620}
   crosshair: {fileID: 1319426128}
+  timerScript: {fileID: 0}
 --- !u!4 &245609289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71dff7276c6f7c340bb77fb8b2ae810e, type: 3}
@@ -27137,6 +27138,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1723036994, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efc2bd72fbf52214cbb1b6c1983cb3ff, type: 3}
     - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -31366,6 +31371,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5498308115927277632, guid: 4610198642a00e24fadad6df61c90d46, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d964acc5324ead549bd572063a2933f7, type: 3}
+    - target: {fileID: 5498308115927277632, guid: 4610198642a00e24fadad6df61c90d46, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498308115927277632, guid: 4610198642a00e24fadad6df61c90d46, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7239211361750379390, guid: 518d437af499b2d4e8766ebfa5cac3eb, type: 2}
     - target: {fileID: 7325128797665565641, guid: 4610198642a00e24fadad6df61c90d46, type: 3}
       propertyPath: m_Name
       value: Enemy Grunt 1
