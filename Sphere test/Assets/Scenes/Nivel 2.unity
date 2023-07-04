@@ -19782,6 +19782,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6666396353539826540, guid: 4f32b2a4b12f0a74e961a9ea388b2c00, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666396353539826540, guid: 4f32b2a4b12f0a74e961a9ea388b2c00, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51e1308f64f58fd46a00374a0e20a640, type: 3}
+    - target: {fileID: 6666396353539826540, guid: 4f32b2a4b12f0a74e961a9ea388b2c00, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2435050476190476943, guid: 518d437af499b2d4e8766ebfa5cac3eb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f32b2a4b12f0a74e961a9ea388b2c00, type: 3}
 --- !u!1001 &990055598
