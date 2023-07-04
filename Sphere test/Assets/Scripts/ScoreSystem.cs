@@ -19,8 +19,6 @@ public class ScoreSystem : MonoBehaviour
 
     private void Start()
     {
-        pigSquashSound = GameObject.Find("Enemy Grunt 1").GetComponent<AudioSource>();
-        pigSquashSound = GameObject.Find("Enemy Grunt 2").GetComponent<AudioSource>();
         scoreText = GameObject.Find("Canvas/Score Text").GetComponent<TMP_Text>();
         multiplierText = GameObject.Find("Canvas/Multiplier Text").GetComponent<TMP_Text>();
     }

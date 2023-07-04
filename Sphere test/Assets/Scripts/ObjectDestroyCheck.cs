@@ -8,6 +8,7 @@ public class ObjectDestroyCheck : MonoBehaviour
     public GameObject objectToCheck;
     public float delayBeforeSceneLoad = 3f; // Delay in seconds before loading the scene
     public string sceneToLoad;
+    public AudioSource explosionSoundEffect;
 
     private bool isObjectDestroyed = false;
 
@@ -21,6 +22,7 @@ public class ObjectDestroyCheck : MonoBehaviour
         // Check if the object has been destroyed
         if (objectToCheck == null && !isObjectDestroyed)
         {
+            explosionSoundEffect.Play();
             isObjectDestroyed = true;
             StartCoroutine(LoadSceneAfterDelay());
         }
