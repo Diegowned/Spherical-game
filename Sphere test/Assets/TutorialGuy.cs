@@ -10,6 +10,13 @@ public class TutorialGuy : MonoBehaviour
     public GameObject soHead;
     public GameObject player;
     public GameObject crosshair;
+    public Timer timerScript;
+
+
+    private void Start()
+    {
+        timerScript = GameObject.Find("GameManager").GetComponent<Timer>();
+    }
     void Update()
 
     {
@@ -20,6 +27,7 @@ public class TutorialGuy : MonoBehaviour
         }
         if (ConversationManager.Instance.IsConversationActive == false)
         {
+            timerScript.isPaused = false;
             soHead.SetActive(false);
             player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             crosshair.SetActive(true);
@@ -28,6 +36,7 @@ public class TutorialGuy : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        timerScript.isPaused = true;
         player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         crosshair.SetActive(false);
         soHead.SetActive(true);
