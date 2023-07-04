@@ -9,6 +9,7 @@ public class KillBarrier : MonoBehaviour
     public float destructionDelay;
     public float sceneLoadDelay;
     public GameObject player;
+    public AudioSource poofSoundEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class KillBarrier : MonoBehaviour
         // Disable the player's collider and renderer
         player.gameObject.SetActive(false);
         // Play explosion particle effect
+        poofSoundEffect.Play();
         poofParticle.Play();
 
         yield return new WaitForSeconds(sceneLoadDelay);
