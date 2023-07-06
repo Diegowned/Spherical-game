@@ -182,8 +182,8 @@ Material:
     - _RimLightAlign: 0
     - _RimLightSmoothness: 0
     - _RimPower: 0.55
-    - _RimStep: 0.65
-    - _RimStepSmooth: 0.4
+    - _RimStep: 0
+    - _RimStepSmooth: 0
     - _ShadowStep: 0.487
     - _ShadowStepSmooth: 0.04
     - _SizeFalloff: 0
@@ -196,7 +196,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularSize: 1
     - _SpecularStep: 0
-    - _SpecularStepSmooth: 0.05
+    - _SpecularStepSmooth: 0
     - _SpherizeNormalEnabled: 0
     - _SrcBlend: 1
     - _StencilComp: 0
