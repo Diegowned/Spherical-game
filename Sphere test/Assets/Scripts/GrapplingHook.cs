@@ -10,6 +10,7 @@ public class GrapplingHook : MonoBehaviour
     public LayerMask grappleableLayers; // Layers that the grapple can attach to
     public Color lineColor = Color.white; // Color of the line renderer
     public Image crosshair;
+    public KeyCode grappleKey = KeyCode.Mouse0;
 
     private Rigidbody playerRigidbody;
     [SerializeField]
@@ -51,11 +52,11 @@ public class GrapplingHook : MonoBehaviour
             grapplehookImage.gameObject.SetActive(false);
         }
 
-        if (Input.GetButtonDown("Fire1") && !isGrappling)
+        if (Input.GetKeyDown(grappleKey) && !isGrappling)
         {
             StartGrapple();
         }
-        else if (Input.GetButtonUp("Fire1") && isGrappling)
+        else if (Input.GetKeyUp(grappleKey) && isGrappling)
         {
             StopGrapple();
         }

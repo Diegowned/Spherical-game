@@ -8,12 +8,13 @@ public class ObjectDestroyCheck : MonoBehaviour
     public GameObject objectToCheck;
     public float delayBeforeSceneLoad = 3f; // Delay in seconds before loading the scene
     public string sceneToLoad;
-    public AudioSource explosionSoundEffect;
+    public AudioManager audioManager;
 
     private bool isObjectDestroyed = false;
 
     private void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         objectToCheck = GameObject.Find("Drill Final");
     }
 
@@ -22,7 +23,7 @@ public class ObjectDestroyCheck : MonoBehaviour
         // Check if the object has been destroyed
         if (objectToCheck == null && !isObjectDestroyed)
         {
-            explosionSoundEffect.Play();
+            audioManager.PlaySFX(audioManager.explosionSound);
             isObjectDestroyed = true;
             StartCoroutine(LoadSceneAfterDelay());
         }

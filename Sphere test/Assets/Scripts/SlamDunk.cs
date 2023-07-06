@@ -12,13 +12,13 @@ public class SlamDunk : MonoBehaviour
     public float slamForce = 500f; // the force with which the sphere will slam into the ground
     public PlayerController pc;
     public ParticleSystem shockwaveParticle;
-    public AudioSource slamSoundEffect;
+    public AudioManager audioManager;
 
     private Rigidbody rb; // reference to the sphere's Rigidbody component
 
     void Start()
     {
-        slamSoundEffect = GameObject.Find("Player/Sphere").GetComponent<AudioSource>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         shockwaveParticle = GameObject.Find("Player/CFXR2 Ground Hit").GetComponent<ParticleSystem>();
         pc = GameObject.Find("Sphere").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody>();
@@ -55,7 +55,7 @@ public class SlamDunk : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") && isSlamming > 0) // check if the sphere has collided with an object tagged as "Ground"
         {
-            slamSoundEffect.Play();
+            audioManager.PlaySFX(audioManager.slamSound);
             CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 1f);
             shockwaveParticle.Play();
             isSlamming = 0;

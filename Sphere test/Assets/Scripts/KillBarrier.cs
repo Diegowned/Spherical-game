@@ -9,11 +9,12 @@ public class KillBarrier : MonoBehaviour
     public float destructionDelay;
     public float sceneLoadDelay;
     public GameObject player;
-    public AudioSource poofSoundEffect;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         player = GameObject.Find("Player/Sphere/RocaPersonaje");
         poofParticle = GameObject.Find("Player/CFXR Magic Poof").GetComponent<ParticleSystem>();
     }
@@ -35,7 +36,7 @@ public class KillBarrier : MonoBehaviour
         // Disable the player's collider and renderer
         player.gameObject.SetActive(false);
         // Play explosion particle effect
-        poofSoundEffect.Play();
+        audioManager.PlaySFX(audioManager.poofSound);
         poofParticle.Play();
 
         yield return new WaitForSeconds(sceneLoadDelay);
