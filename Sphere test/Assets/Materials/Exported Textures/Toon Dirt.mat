@@ -171,7 +171,7 @@ Material:
     - _RimStep: 0
     - _RimStepSmooth: 0
     - _ShadowStep: 0.5
-    - _ShadowStepSmooth: 0.04
+    - _ShadowStepSmooth: 0.07
     - _SizeFalloff: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
