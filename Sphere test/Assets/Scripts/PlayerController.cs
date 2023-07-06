@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public GrapplingHook grapplingHookScript;
     private GameObject slamImage;
     private GameObject jumpImage;
+    public AudioManager audioManager;
 
     [SerializeField]
     private PlayerState currentState = PlayerState.Idle;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         jumpImage = GameObject.Find("Canvas/Controls On Screen/Jump");
         slamImage = GameObject.Find("Canvas/Controls On Screen/Slam");
         rb = GetComponent<Rigidbody>();
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded) // check if the player has pressed the jump button and the sphere is grounded
         {
+            audioManager.PlaySFX(audioManager.jumpSound);
             rb.AddForce(Vector3.up * jumpForce); // apply force to the sphere to make it jump
         }
         if (!isGrounded)

@@ -50,7 +50,7 @@ MonoBehaviour:
   SFXSource: {fileID: 2429741640393845306}
   background: {fileID: 8300000, guid: 51e1308f64f58fd46a00374a0e20a640, type: 3}
   slamSound: {fileID: 8300000, guid: 85d63ef68c8e4404abd1ebd5a3b9d577, type: 3}
-  grappleHookSound: {fileID: 0}
+  grappleHookSound: {fileID: 8300000, guid: d7c6775fb98d55c4b894e34d60b41df6, type: 3}
   enemySquishSound: {fileID: 8300000, guid: d964acc5324ead549bd572063a2933f7, type: 3}
   jumpSound: {fileID: 0}
   explosionSound: {fileID: 8300000, guid: d51b71a926d70ec4f8175e7f61b2d59f, type: 3}

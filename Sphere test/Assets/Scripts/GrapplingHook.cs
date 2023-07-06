@@ -11,6 +11,7 @@ public class GrapplingHook : MonoBehaviour
     public Color lineColor = Color.white; // Color of the line renderer
     public Image crosshair;
     public KeyCode grappleKey = KeyCode.Mouse0;
+    public AudioManager audioManager;
 
     private Rigidbody playerRigidbody;
     [SerializeField]
@@ -25,6 +26,7 @@ public class GrapplingHook : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         grapplehookImage = GameObject.Find("Canvas/Controls On Screen/Hook");
         crosshair = GameObject.Find("Canvas/Crosshair").GetComponent<Image>();
         playerRigidbody = GetComponent<Rigidbody>();
@@ -100,6 +102,7 @@ public class GrapplingHook : MonoBehaviour
         {
             isGrappling = true;
             grapplePoint = hit.point;
+            audioManager.PlaySFX(audioManager.grappleHookSound);
 
             // Create a spring joint between the player and the grapple point
             grappleJoint = gameObject.AddComponent<SpringJoint>();
