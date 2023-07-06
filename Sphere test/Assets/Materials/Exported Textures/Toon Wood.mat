@@ -174,8 +174,8 @@ Material:
     - _RimPower: 0.55
     - _RimStep: 0
     - _RimStepSmooth: 0
-    - _ShadowStep: 0.5
-    - _ShadowStepSmooth: 0.176
+    - _ShadowStep: 0.57
+    - _ShadowStepSmooth: 0.08
     - _Shininess: 0
     - _SizeFalloff: 0
     - _Smoothness: 0.5
