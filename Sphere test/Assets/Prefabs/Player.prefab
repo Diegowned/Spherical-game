@@ -180,6 +180,7 @@ MonoBehaviour:
   isGrounded: 0
   playerStateText: {fileID: 0}
   grapplingHookScript: {fileID: 0}
+  audioManager: {fileID: 0}
   currentState: 0
 --- !u!114 &6786848608778409598
 MonoBehaviour:
@@ -219,6 +220,7 @@ MonoBehaviour:
   lineColor: {r: 1, g: 0, b: 0, a: 1}
   crosshair: {fileID: 0}
   grappleKey: 323
+  audioManager: {fileID: 0}
   distanceGrapple: 10
   mingrappleDistance: 10
   maxgrappleDistance: 20
@@ -339,6 +341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RocaPersonaje
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 6567b4bf66be75a4a8066a3b6d413ade, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64ae275810387754797cf1d0ac1b823f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6567b4bf66be75a4a8066a3b6d413ade, type: 3}
 --- !u!4 &1785905415777245519 stripped
