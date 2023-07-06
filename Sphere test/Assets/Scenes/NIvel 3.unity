@@ -13014,6 +13014,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1723036994, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efc2bd72fbf52214cbb1b6c1983cb3ff, type: 3}
     - target: {fileID: 3377794583760707572, guid: cfb2a2ac25f93d74cbd3c436d8b79840, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -13176,9 +13180,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 232909379}
     - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: _CollisionLayers
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
       propertyPath: _InputSourceOwner
       value: 
       objectReference: {fileID: 41071249}
+    - target: {fileID: 5076314552864884444, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
+      propertyPath: MotorDefinitions.Array.data[1]
+      value: '{, "Type" : "com.ootii.Cameras.OrbitFixedMotor, ootii, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null", "Name" : "3rd Person Fixed", "IsEnabled"
+        : "True", "ActionAlias" : "", "UseRigAnchor" : "True", "AnchorIndex" : "-1",
+        "AnchorOffset" : "(0, 0, 0)", "Offset" : "(0, 0, 0)", "Distance" : "25.00000",
+        "MaxDistance" : "25.00000", "IsCollisionEnabled" : "True", "IsFadingEnabled"
+        : "True", "SpecifyFadeRenderers" : "False", "FadeTransformIndexes" : "",
+        "RotateWithAnchor" : "False", "RotateAnchor" : "False", "RotateAnchorAlias"
+        : "Camera Rotate Character", "IsYawEnabled" : "True", "MinYaw" : "-180",
+        "MaxYaw" : "180", "YawSpeed" : "120", "TargetRotationMultiplier" : "3", "IsPitchEnabled"
+        : "True", "InvertPitch" : "True", "MinPitch" : "-60", "MaxPitch" : "60",
+        "PitchSpeed" : "45", "Smoothing" : "0.05"}'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ec6635db371df4ea7490f91e692466, type: 3}
 --- !u!114 &1815050421

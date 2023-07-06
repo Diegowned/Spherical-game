@@ -52,7 +52,7 @@ MonoBehaviour:
   slamSound: {fileID: 8300000, guid: 85d63ef68c8e4404abd1ebd5a3b9d577, type: 3}
   grappleHookSound: {fileID: 8300000, guid: d7c6775fb98d55c4b894e34d60b41df6, type: 3}
   enemySquishSound: {fileID: 8300000, guid: d964acc5324ead549bd572063a2933f7, type: 3}
-  jumpSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 3d60e7579b47b4447845f63f8295dfa6, type: 3}
   explosionSound: {fileID: 8300000, guid: d51b71a926d70ec4f8175e7f61b2d59f, type: 3}
   rollingSound: {fileID: 0}
   poofSound: {fileID: 8300000, guid: 46e058a50c92e3c41921c8d31a24212a, type: 3}
